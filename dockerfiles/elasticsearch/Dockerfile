@@ -3,7 +3,7 @@ RUN apt-get update && \
     apt-get install -y openjdk-7-jre wget
 ENV JAVA_HOME /usr/lib/jvm/java-6-openjdk-amd64
 RUN (cd /tmp && \
-    wget https://download.elasticsearch.org/elasticsearch/release/org/elasticsearch/distribution/deb/elasticsearch/2.2.1/elasticsearch-2.2.1.deb -O pkg.tar.gz && \
+    wget https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/deb/elasticsearch/2.3.5/elasticsearch-2.3.5.deb -O pkg.tar.gz && \
     tar zxf pkg.tar.gz && mv elasticsearch-* /opt/elasticsearch &&\
     rm -rf /tmp/*)
 COPY elasticsearch.yml /opt/elasticsearch/config/elasticsearch.yml
